@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Member Panel - Vote with Your Vallet</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="index.html">Vote with Your Wallet!</a>
+</div>
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+</ul>
+<ul class="nav navbar-nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="causes.html">Causes</a></li>
+<li><a href="about.html">About Us</a></li>
+<li class="active"><a href="member.html">Member</a></li>
+</ul>
+</div>
+</div>
+</nav>
+	
+	<!-- Page content -->
+<div class="container">
+  <h1>User Panel</h1>
+  <p>Welcome to your user panel. Here, you can see the causes that you've followed.</p>
+  <p> Here you can create new causes and view them. Just select this button and fill the form at the bottom. <button type="button" class="btn btn-secondary btn-small" onclick="showOrHideNewCauseForm()">Create New Cause</button></p>
+
+  <!-- Table of followed causes -->
+<table class="table">
+<h3>Followed causes:</h3>
+<thead class="thead-dark">
+<tr>
+<th scope="col">Cause ID</th>
+<th scope="col">Title</th>
+<th scope="col">Category</th>
+<th scope="col">Follows</th>
+<th scope="col">Followed On</th>
+<th scope="col">Actions</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Cause 1</td>
+<td>Unfair Treatment at Work</td>
+<td>Unfair Employment Practices</td>
+<td><p id="followCount_cause1">3</p></td>
+<td>2023-03-10</td>
+<td>
+<a href="cause1.html"button type="button" class="btn btn-info btn-sm">View</a></button>
+<button type="button" class="btn btn-danger btn-sm" onclick="unFollow('cause1')">Unfollow</button>
+</td>
+</tr>
+
+<tr>
+<td>Cause 2</td>
+<td>The CO2 emissions raises</td>
+<td>Disregard of Environmental Impact</td>
+<td><p id="followCount_cause2">63</p></td>
+<td>2023-03-10</td>
+<td>
+<a href="cause2.html" button type="button" class="btn btn-info btn-sm" >View</a></button>
+<button type="button" class="btn btn-danger btn-sm" onclick="unFollow('cause2')">Unfollow</button>
+</td>
+</tr>
+    
+</tbody>
+</table><!--end table 1-->
+  
+<table class="table">
+<thead class="thead-dark"><h3>Created causes:</h3>
+<tr>
+<th scope="col">Cause ID</th>
+<th scope="col">Title</th>
+<th scope="col">Category</th>
+<th scope="col">Created On</th>
+<th scope="col">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cause 1</td>
+<td>Unfair Treatment at Work</td>
+<td>Unfair Employment Practices</td>
+<td>2023-03-10</td>
+<td>
+
+<!--buttons-->
+<button type="button" class="btn btn-success btn-sm">Edit</button>
+<button type="button" class="btn btn-info btn-sm">View</button>
+<button type="button" class="btn btn-danger btn-sm">Remove</button>
+</tr>
+</tbody>
+</table><!--end table2-->
+
+
+
+
+<div id="new">
+<tr><h4> New Cause Title: <input type="text" id="newCauseName" name="newCauseName">
+ <button type="button" class="btn btn-info btn-small" onclick="addNewCause()">Create</button> </h4>
+ <h4>Cause description: </h4>
+<textarea id="newCauseInfo" name="causeText" class="form-control" rows="5"required></textarea></tr>
+</div>	
+
+</div>
+<script src="./js/script.js"></script>
+
+
+
+</body>
+
+
+</html>

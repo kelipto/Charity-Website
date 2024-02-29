@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cause 5 - Vote with Your Wallet</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+	<!--Navbar-->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Vote with Your Wallet!</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				 
+                <ul class="nav navbar-nav navbar-right">
+					   <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+				</ul>
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="causes.html">Causes</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="member.html">Member</a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Page content -->
+	<div class="container">
+
+		<main>
+			
+<div id="cause5">
+			<h3>Cause 5: 
+			<button id="signatureButton_cause5" type="button" class="btn btn-light btn-lg" onclick="leaveSignature('cause5')">Sign</button>
+			<button id="followButton_cause5"  type="button" class="btn btn-light btn-lg" onclick="follow('cause5')">Follow</button>
+			</h3>  
+			<table> 
+			<h4><p id="title">Title: </p></h4>
+			<tr>
+			<th><p id="signatureCount_cause5">0 signatures</p></th>
+			<th>&nbsp;</th>
+			<th><p id="followCount_cause5">0 Following</p></th>
+			</tr>
+			</table>
+			<p id="causeInfo_cause1">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</main>
+<!-- Comments form and div for Cause 1 -->
+ <div id="cf5">
+
+<form onsubmit="submitComment(event, this)">
+<label for="commentName">Name:</label>
+<input type="text" id="commentName" name="commentName" required>
+<br>
+<label for="commentText">Comment:</label><br>
+<textarea id="commentText" name="commentText" class="form-control" rows="5"required></textarea>
+<br>
+<button type="Submit" class="btn btn-success btn-small">Add your comment</button>
+</form>
+
+    <div class="comments"><h4>Discussion:</h4>
+	<strong>10/02/2023, 9:30:45<strong>
+<p>
+  <strong>Dummy Dummy:</strong><br>
+  Dummy comment to test if it works as it should!
+  <br>
+</p>
+<strong>10/02/2023, 9:30:45<strong>
+<p>
+  <strong>Dummy The Second:</strong><br>
+  Second Dummy comment to test if it works as it should!
+  <br>
+</p>
+</div>
+</div>
+</div>
+
+
+<script src="./js/script.js"></script>
+
+	</div>
+
+</body>
+</html>

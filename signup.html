@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up - Vote with Your Vallet</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="index.html">Vote with Your Wallet!</a>
+</div>
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Sign in</a></li>
+</ul>
+<ul class="nav navbar-nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="causes.html">Causes</a></li>
+<li><a href="about.html">About Us</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+	<!-- Page content -->
+<div class="container">
+
+<form action="#" method="POST">
+<div class="form-group">
+<label for="fname">First Name</label>
+<input type="fname" class="form-control" id="fname" placeholder="First Name"required>
+</div>
+<div class="form-group">
+<label for="lname">Last Name</label>
+<input type="lname" class="form-control" id="lname" placeholder="Last Name"required>
+</div>
+<div class="form-group">
+<label for="email">Email address</label>
+<input type="email" class="form-control" id="email" placeholder="Enter email"required>
+<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+<div class="form-group">
+<label for="psw">Password</label>
+<input type="psw" class="form-control" id="psw" placeholder="Password"required>
+</div>
+<div class="form-group">
+<label for="cpsw">Confirm Password</label>
+<input type="cpsw" class="form-control" id="cpsw" placeholder="Password" required>
+</div>
+<div class="form-group form-check">
+<input type="checkbox" class="form-check-input" id="news">
+<label class="form-check-label" for="news">Subscribe to Newsletter</label>
+<p><small id="newsletterhelp" class="form-text text-muted">By subscribing to our newsletter you agree with our requirements and policies.</small></p>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
+

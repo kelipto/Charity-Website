@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Causes - Vote with Your Vallet</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+
+</head>
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-inverse">
+<div class="container-fluid">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="index.html">Vote with Your Wallet!</a>
+</div>
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+</ul>
+<ul class="nav navbar-nav">
+<li><a href="index.html">Home</a></li>
+<li class="active"><a href="causes.html">Causes</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="member.html">Member</a></li>
+</ul>
+</div>
+</div>
+</nav>
+	
+
+<!-- Page content -->
+	
+<div class="container">
+
+
+<label for="cause"><h3>Select a Cause you want to comment or vote:</h3></label>
+<select id="cause" onchange="displayCause()">
+<option value="all"> Show All Causes</option>
+<option value="cause1">Cause 1</option>
+<option value="cause2">Cause 2</option>
+<option value="cause3">Cause 3</option>
+<option value="cause4">Cause 4</option>
+</select>
+
+<div id ="all">	
+<div id="causeList">	
+<p>If you would like to <a href="#" onclick="showOrHideNewCauseForm()">Create New Cause (click here) </a> or go to Member panel and create it there.</p>
+
+<div id="new">
+<tr><h4> New Cause Title: <input type="text" id="newCauseName" name="newCauseName">
+<h4>Cause description: </h4>
+<textarea id="newCauseInfo" name="causeText" class="form-control" rows="5"required></textarea></tr>
+<button type="button" class="btn btn-info btn-block" onclick="addNewCause()">Create</button> </h4>
+*Note: After creating new cause, the cause will appear at the bottom of the page.
+</div><!--end new-->
+
+<div id="cause1">
+<h3><a href=".\cause1.html">Cause 1: Unfair Employment Practices </a>
+<button id="signatureButton_cause1" type="button" class="btn-primary btn-sm" onclick="leaveSignature('cause1')">Sign</button>
+<button id="followButton_cause1"  type="button" class="btn-success btn-sm" onclick="follow('cause1')">Follow</button>
+</h3>  
+<table> 
+<h4><p id="title">Title: Unfair Treatment at Work</p></h4>
+<tr>
+<th><p id="signatureCount_cause1">3 signatures</p></th>
+<th>&nbsp;</th>
+<th><p id="followCount_cause1">3 Following</p></th>
+</tr>
+</table>
+
+<p id="causeInfo_cause1">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<button type="follow" class="btn btn-light btn-block" onclick="showOrHideComments(1)">Show Comments</button> <p>
+  <!-- Comments form and div for Cause 1 -->
+ <div id="cf1">
+<div class="comments"><h4>Comments:</h4>
+<strong>14/03/2023, 9:30:45</strong>
+<p>
+  <strong>Michael Brown:</strong><br>
+  Your article was well-researched and provided a lot of useful information. Thanks for sharing your knowledge!
+  <br>
+</p>
+<strong>14/03/2023, 9:31:45</strong>
+<p>
+  <strong>Chris Thompson:</strong><br>
+  Your article was well-written and provided me with some new ideas to consider. Thanks for sharing!
+  <br>
+</p>
+<strong>14/03/2023, 9:32:45</strong>
+<p>
+  <strong>Amy Lee:</strong><br>
+  I enjoyed reading your article and found it very insightful. Thanks for sharing your expertise!
+  <br>
+</p>
+
+</div><!--end comments-->
+</div><!--end cf1-->
+</div><!--end cause1-->		
+					
+<div id="cause2">
+<h3><a href="cause2.html">Cause 2: Disregard of Environmental Impact</a>
+<button id="signatureButton_cause2" type="button" class="btn-primary btn-sm" onclick="leaveSignature('cause2')">Sign</button>
+<button id="followButton_cause2"  type="button" class="btn-success btn-sm"  onclick="follow('cause2')">Follow</button>
+</h3>
+
+<table> 
+<h4><p id="title">Title: The CO2 emissions raises</p></h4>
+<tr>
+<th><p id="signatureCount_cause2">75 signatures</p>	
+</th>
+<th>&nbsp;</th>
+<th><p id="followCount_cause2">63 Following</p></th>
+</tr>
+</table>
+
+<p id="causeInfo_cause2">
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<button type="follow" class="btn btn-light btn-block" onclick="showOrHideComments(2)">Show Comments</button> <p>
+<!-- Comments form and div for Cause 2 -->
+<div id="cf2">
+<div class="comments"><h4>Discussion:</h4>
+
+<strong>10/02/2023, 9:30:45</strong>
+<p>
+  <strong>John Smith:</strong><br>
+  Hi there! I really enjoyed reading this article. Thanks for sharing!
+  <br>
+</p>
+<strong>15/02/2023, 19:30:45</strong>
+<p>
+  <strong>Emily Davis:</strong><br>
+  Great article! I learned a lot and appreciate the effort that went into writing it.
+  <br>
+</p>
+<strong>16/02/2023, 20:31:43</strong>
+<p>
+  <strong>Tom Johnson:</strong><br>
+  Thanks for sharing your insights. This was a really interesting read!
+  <br>
+</p>
+<strong>19/02/2023, 11:11:45</strong>
+<p>
+  <strong>Michelle Rodriguez:</strong><br>
+  Your article was very informative and well-written. Keep up the great work!
+  <br>
+</p>
+<strong>24/02/2023, 13:20:45</strong>
+<p>
+  <strong>David Lee:</strong><br>
+  I enjoyed reading your article and gained a lot of valuable insights from it. Thanks for sharing!
+  <br>
+</p>
+</div><!--end comment-->
+</div><!--end cf2-->
+</div><!--end cause2-->
+
+
+<div id="cause3">			
+<h3><a href="cause3.html">Cause 3: Racism	</a>
+<button id="signatureButton_cause3" type="button" class="btn-primary btn-sm"  onclick="leaveSignature('cause3')">Sign</button>
+<button id="followButton_cause3"  type="button" class="btn-success btn-sm"  onclick="follow('cause3')">Follow</button> </h3>   
+
+<table> 
+<h4><p id="title">Title: Is world turning people against each other?</p></h4>
+<tr>
+<th><p id="signatureCount_cause3">250 signatures</p></th>
+<th>&nbsp;</th>
+<th><p id="followCount_cause3">250 Following</p></th>
+</tr>
+</table>
+
+<p id="causeInfo_cause3">
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+<button type="follow" class="btn btn-light btn-block" onclick="showOrHideComments(3)">Show Comments</button> <p>
+ <!-- Comments form and div for Cause 3 -->
+ <div id="cf3">
+<div class="comments"><h4>Discussion:</h4>
+<strong>10/02/2023, 9:30:45</strong>
+<p>
+  <strong>John Smith:</strong><br>
+  Hi there! I really enjoyed reading this article. Thanks for sharing!
+  <br>
+</p>
+<strong>15/02/2023, 19:30:45</strong>
+<p>
+  <strong>Emily Davis:</strong><br>
+  Great article! I learned a lot and appreciate the effort that went into writing it.
+  <br>
+</p>
+<strong>16/02/2023, 20:31:43</strong>
+<p>
+  <strong>Tom Johnson:</strong><br>
+  Thanks for sharing your insights. This was a really interesting read!
+  <br>
+</p>
+<strong>19/02/2023, 11:11:45</strong>
+<p>
+  <strong>Michelle Rodriguez:</strong><br>
+  Your article was very informative and well-written. Keep up the great work!
+  <br>
+</p>
+<strong>24/02/2023, 13:20:45</strong>
+<p>
+  <strong>David Lee:</strong><br>
+  I enjoyed reading your article and gained a lot of valuable insights from it. Thanks for sharing!
+  <br>
+</p>
+
+</div><!--end comments-->
+</div><!--end cf3-->
+</div><!--end cause3-->
+
+
+<div id="cause4">
+<tr>
+<h3><a href="cause4.html">Cause 4: Creative Tax Avoidance</a>
+<button id="signatureButton_cause4" type="button" class="btn-primary btn-sm"  onclick="leaveSignature('cause4')">Sign</button>
+<button id="followButton_cause4"  type="button" class="btn-success btn-sm"  onclick="follow('cause4')">Follow</button></h3>
+<table>
+<h4><p id="title">Title: This millionaire made more millions than you think</p></h4>			
+<tr>
+<th><p id="signatureCount_cause4">100 signatures</p></th>
+<th>&nbsp;</th>
+<th><p id="followCount_cause4">100 Following</p></th>
+</tr>
+</table>
+
+<p id="causeInfo_cause4">
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<button type="follow" class="btn btn-light btn-block" onclick="showOrHideComments(4)">Show Comments</button><p>
+
+<!-- Comments form and div for Cause 4 -->
+<div id="cf4">
+<div class="comments"><h4>Discussion:</h4>
+<strong>10/02/2023, 9:30:45</strong>
+<p>
+<strong>John Smith:</strong><br>
+Hi there! I really enjoyed reading this article. Thanks for sharing!
+<br>
+</p>
+<strong>15/02/2023, 19:30:45</strong>
+<p>
+<strong>Emily Davis:</strong><br>
+Great article! I learned a lot and appreciate the effort that went into writing it.
+<br>
+</p>
+<strong>16/02/2023, 20:31:43</strong>
+<p>
+<strong>Tom Johnson:</strong><br>
+Thanks for sharing your insights. This was a really interesting read!
+<br>
+</p>
+<strong>19/02/2023, 11:11:45</strong>
+<p>
+<strong>Michelle Rodriguez:</strong><br>
+Your article was very informative and well-written. Keep up the great work!
+<br>
+</p>
+<strong>24/02/2023, 13:20:45</strong>
+<p>
+<strong>David Lee:</strong><br>
+I enjoyed reading your article and gained a lot of valuable insights from it. Thanks for sharing!
+<br>
+</p>
+
+</div><!--end comments-->
+</div><!--end cf4-->
+</div><!--end cause4-->
+
+</div><!--end causeList-->
+</div><!--end all-->
+</div><!--end container-->
+
+
+<script src="./js/script.js"></script>
+</body>
+</html>
